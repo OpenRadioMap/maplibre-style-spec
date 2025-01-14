@@ -4811,7 +4811,7 @@
 </tbody>
 </table>
 <h3 id="geometry-type">geometry-type<a class="headerlink" href="#geometry-type" title="Permanent link">&para;</a></h3>
-<p>Gets the feature's geometry type: <code>Point</code>, <code>MultiPoint</code>, <code>LineString</code>, <code>MultiLineString</code>, <code>Polygon</code>, <code>MultiPolygon</code>.</p>
+<p>Returns the feature's simple geometry type: <code>Point</code>, <code>LineString</code>, or <code>Polygon</code>. <code>MultiPoint</code>, <code>MultiLineString</code>, and <code>MultiPolygon</code> are returned as <code>Point</code>, <code>LineString</code>, and <code>Polygon</code>, respectively.</p>
 <p>Syntax:
 <div class="language-js highlight"><pre><span></span><code><span id="__span-153-1"><a id="__codelineno-153-1" name="__codelineno-153-1" href="#__codelineno-153-1"></a><span class="p">[</span><span class="s2">&quot;geometry-type&quot;</span><span class="p">]</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span>
 </span></code></pre></div></p>
