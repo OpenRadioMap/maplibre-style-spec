@@ -1,12 +1,18 @@
 ## main
-
 ### ✨ Features and improvements
-- Add `unit` option to `number-format` expression to allow formatting quantities depending on the locale.
-- Add `resampling` paint property to raster, hillshade, and color relief layers ([#1447](https://github.com/maplibre/maplibre-style-spec/issues/1447)) (by [larsmaxfield](https://github.com/larsmaxfield))
 - _...Add new stuff here..._
 
 ### 🐞 Bug fixes
 - _...Add new stuff here..._
+
+## 24.5.0
+
+### ✨ Features and improvements
+
+- Add "unit" option to "number-format" ([#1335](https://github.com/maplibre/maplibre-style-spec/pull/1335)) (by [ginnyTheCat](https://github.com/ginnyTheCat))
+- Add `resampling` paint property to raster, hillshade, and color relief layers ([#1447](https://github.com/maplibre/maplibre-style-spec/issues/1447)) (by [larsmaxfield](https://github.com/larsmaxfield))
+- Include 'transparent' as a permitted color name ([#1442](https://github.com/maplibre/maplibre-style-spec/pull/1442)) (by [zstadler](https://github.com/zstadler))
+- Migrate docs to zensical ([#1394](https://github.com/maplibre/maplibre-style-spec/pull/1394)) (by [CommanderStorm](https://github.com/CommanderStorm))
 
 ## 24.4.1
 
