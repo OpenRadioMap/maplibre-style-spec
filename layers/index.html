@@ -2066,6 +2066,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#resampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#raster-resampling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2203,6 +2214,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#resampling_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resampling
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2247,6 +2269,17 @@
     <span class="md-ellipsis">
       
         color-relief-color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resampling_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resampling
       
     </span>
   </a>
@@ -4186,6 +4219,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#resampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#raster-resampling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4323,6 +4367,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#resampling_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resampling
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4367,6 +4422,17 @@
     <span class="md-ellipsis">
       
         color-relief-color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resampling_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resampling
       
     </span>
   </a>
@@ -7693,9 +7759,35 @@
 </tr>
 </tbody>
 </table>
+<h3 id="resampling">resampling<a class="headerlink" href="#resampling" title="Permanent link">&para;</a></h3>
+<p><em><a href="#paint">Paint</a> property. Optional <a href="../types/#enum">enum</a>. Possible values: <code>linear</code>, <code>nearest</code>. Defaults to <code>"linear"</code>.</em></p>
+<p>The resampling/interpolation method to use for overscaling, also known as texture magnification filter.
+<img alt="Visual comparison of linear resampling versus nearest resampling" src="../assets/resampling.png" /></p>
+<ul>
+<li><code>linear</code>: (Bi)linear filtering interpolates pixel values using the weighted average of the four closest original source pixels creating a smooth but blurry look when overscaled</li>
+<li><code>nearest</code>: Nearest neighbor filtering interpolates pixel values using the nearest original source pixel creating a sharp but pixelated look when overscaled</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>SDK Support</th>
+<th>MapLibre GL JS</th>
+<th>MapLibre Native<br>Android</th>
+<th>MapLibre Native<br>iOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>basic functionality</td>
+<td>❌ (<a href="https://github.com/maplibre/maplibre-gl-js/issues/7154">#7154</a>)</td>
+<td>❌ (<a href="https://github.com/maplibre/maplibre-native/issues/4117">#4117</a>)</td>
+<td>❌ (<a href="https://github.com/maplibre/maplibre-native/issues/4117">#4117</a>)</td>
+</tr>
+</tbody>
+</table>
 <h3 id="raster-resampling">raster-resampling<a class="headerlink" href="#raster-resampling" title="Permanent link">&para;</a></h3>
 <p><em><a href="#paint">Paint</a> property. Optional <a href="../types/#enum">enum</a>. Possible values: <code>linear</code>, <code>nearest</code>. Defaults to <code>"linear"</code>.</em></p>
-<p>The resampling/interpolation method to use for overscaling, also known as texture magnification filter</p>
+<p>The resampling/interpolation method to use for overscaling, also known as texture magnification filter. It is advised to use the generic <code>resampling</code> paint property instead.</p>
 <ul>
 <li><code>linear</code>: (Bi)linear filtering interpolates pixel values using the weighted average of the four closest original source pixels creating a smooth but blurry look when overscaled</li>
 <li><code>nearest</code>: Nearest neighbor filtering interpolates pixel values using the nearest original source pixel creating a sharp but pixelated look when overscaled</li>
@@ -7948,7 +8040,8 @@
 </table>
 <h3 id="hillshade-method">hillshade-method<a class="headerlink" href="#hillshade-method" title="Permanent link">&para;</a></h3>
 <p><em><a href="#paint">Paint</a> property. Optional <a href="../types/#enum">enum</a>. Possible values: <code>standard</code>, <code>basic</code>, <code>combined</code>, <code>igor</code>, <code>multidirectional</code>. Defaults to <code>"standard"</code>.</em></p>
-<p>The hillshade algorithm to use, one of <code>standard</code>, <code>basic</code>, <code>combined</code>, <code>igor</code>, or <code>multidirectional</code>. <img alt="image" src="../assets/hillshade_methods.png" /></p>
+<p>The hillshade algorithm to use, one of <code>standard</code>, <code>basic</code>, <code>combined</code>, <code>igor</code>, or <code>multidirectional</code>.
+<img alt="Visual comparison of standard, basic, igor, combined, and multidirectional hillshade-method" src="../assets/hillshade_methods.png" /></p>
 <ul>
 <li><code>standard</code>: The legacy hillshade method.</li>
 <li><code>basic</code>: Basic hillshade. Uses a simple physics model where the reflected light intensity is proportional to the cosine of the angle between the incident light and the surface normal. Similar to GDAL's <code>gdaldem</code> default algorithm.</li>
@@ -7971,6 +8064,32 @@
 <td>5.5.0</td>
 <td>❌ (<a href="https://github.com/maplibre/maplibre-native/issues/3396">#3396</a>)</td>
 <td>❌ (<a href="https://github.com/maplibre/maplibre-native/issues/3396">#3396</a>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resampling_1">resampling<a class="headerlink" href="#resampling_1" title="Permanent link">&para;</a></h3>
+<p><em><a href="#paint">Paint</a> property. Optional <a href="../types/#enum">enum</a>. Possible values: <code>linear</code>, <code>nearest</code>. Defaults to <code>"linear"</code>.</em></p>
+<p>The resampling/interpolation method to use for overscaling, also known as texture magnification filter.
+<img alt="Visual comparison of linear resampling versus nearest resampling" src="../assets/resampling.png" /></p>
+<ul>
+<li><code>linear</code>: (Bi)linear filtering interpolates pixel values using the weighted average of the four closest original source pixels creating a smooth but blurry look when overscaled</li>
+<li><code>nearest</code>: Nearest neighbor filtering interpolates pixel values using the nearest original source pixel creating a sharp but pixelated look when overscaled</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>SDK Support</th>
+<th>MapLibre GL JS</th>
+<th>MapLibre Native<br>Android</th>
+<th>MapLibre Native<br>iOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>basic functionality</td>
+<td>❌ (<a href="https://github.com/maplibre/maplibre-gl-js/issues/7154">#7154</a>)</td>
+<td>❌ (<a href="https://github.com/maplibre/maplibre-native/issues/4117">#4117</a>)</td>
+<td>❌ (<a href="https://github.com/maplibre/maplibre-native/issues/4117">#4117</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -8061,6 +8180,32 @@
 <td>Not supported yet</td>
 <td>Not supported yet</td>
 <td>Not supported yet</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resampling_2">resampling<a class="headerlink" href="#resampling_2" title="Permanent link">&para;</a></h3>
+<p><em><a href="#paint">Paint</a> property. Optional <a href="../types/#enum">enum</a>. Possible values: <code>linear</code>, <code>nearest</code>. Defaults to <code>"linear"</code>.</em></p>
+<p>The resampling/interpolation method to use for overscaling, also known as texture magnification filter.
+<img alt="Visual comparison of linear resampling versus nearest resampling" src="../assets/resampling.png" /></p>
+<ul>
+<li><code>linear</code>: (Bi)linear filtering interpolates pixel values using the weighted average of the four closest original source pixels creating a smooth but blurry look when overscaled</li>
+<li><code>nearest</code>: Nearest neighbor filtering interpolates pixel values using the nearest original source pixel creating a sharp but pixelated look when overscaled</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>SDK Support</th>
+<th>MapLibre GL JS</th>
+<th>MapLibre Native<br>Android</th>
+<th>MapLibre Native<br>iOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>basic functionality</td>
+<td>❌ (<a href="https://github.com/maplibre/maplibre-gl-js/issues/7154">#7154</a>)</td>
+<td>❌ (<a href="https://github.com/maplibre/maplibre-native/issues/4117">#4117</a>)</td>
+<td>❌ (<a href="https://github.com/maplibre/maplibre-native/issues/4117">#4117</a>)</td>
 </tr>
 </tbody>
 </table>
